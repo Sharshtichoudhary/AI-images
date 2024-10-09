@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-container{
+  width: 45%;
+  margin-left: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.main-container{
+  position: relative;
+            width: 72%;
+            z-index: 1;
+}
+.imgcontainer{
+  width: 100%;
+  display: flex;
+  place-items: center;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+.ai-container {
+  width: 100vw;
+  display: flex;
+  gap: 10vw;
+  padding: 6vw 4vw 8vw;
+  background-image: url('../public/assets/bg01.png');
+  background-position: 50%;
+  background-size: cover;
+}
+.dots-image{
+  width: 55%;
+  position: absolute;
+  top: -25%;
+  right: -35%;
+  z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
+.line-background {
+  position: absolute;
+                width: 150%;
+                left: -25%;
+                bottom: -20%;
+                z-index: -1;
+}
+.animate-icon{
+  
+  width: 25%;
+  position: absolute;
+  top: -10%;
+  right: -15%;
+  z-index: -1;
+  transition: all .5s ease;
+
+} 
+.animate-icon1{
+width: 35%;
+                position: absolute;
+                top: 40%;
+                left: -17%;
+                transition: all .5s ease;
+            }
+
+
+.animate-icon2{
+  width: 15%;
+                position: absolute;
+                bottom: 5%;
+                left: -10%;
+                transition: all .5s ease;
 }
 
-@keyframes App-logo-spin {
+.ai-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: opacity 0.5s ease; /* Smooth transition effect */
+  display: block; /* Prevents bottom whitespace */
+}
+
+.ai-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 35%;
+  top: 7%;
+  left: -17%;
+  animation: rotate 2s linear infinite;
+  
+}
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+.cursiveFont{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5vw;
+  color: #7a21bb;
+}
+.ai-text-right{
+  width: 58%;
+  margin-right: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: relative;/* Space between text and image */
+}
+
+.try-now-btn {
+  border: .2vw solid #7a21bb;
+    color: #7a21bb;
+    padding: .5vw 1vw;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.6vw;
+    border-radius: 1.6vw;
+    background-color: transparent;
+    width:20vh;
+}
+
+.try-now-btn:hover {
+  background-color: #7a21bb; /* Change background to #7a21bb on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+.search-bar{
+  position: absolute;
+                bottom: 0;
+                left: 5%;
+                width: 80%;
+                height: 4vh;
+                box-shadow: 0 .2vw .5vw rgba(0, 0, 0, .2);
+                background-color: #fff;
+                padding: .7vw 1vw;
+                border-radius: 1vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+}
+.search-prompt{
+  font-size: 1vw;
+  font-weight: 500;
+  color: #7a21bb;
+}
+
+/* .image-container {
+  position: absolute;
+            width: 16%;
+            top: 26%;
+            right: -20%;
+} */
+
+.new-image {
+  width: 10vh; /* Adjust width as needed */
+  margin-top: 20vh;
+  height:16vh /* Optional: add rounded corners */
+}
+.animate-icon,
+.animate-icon1,
+.animate-icon2 {
+  position: absolute;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.ai-image:hover .animate-icon {
+  transform: translateY(-20px); /* Move upward */
+}
+.ai-image:hover .animate-icon1 {
+  transform: translateX(-30px); /* Move left */
+}
+
+.ai-image:hover .animate-icon2 {
+  transform: translateX(-20px); /* Move left */
+}
+
+
+.instant-container{
+  width: 100%;
+    padding: 3vw 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../public/assets/instantFaceSwapBg.png');
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+.left-instant{
+  width: 50%;
+  margin-left: 2%;
+}
+
+.text-instant{
+  font-family: 'Pacifico', cursive; 
+  font-size: 3.2vw;
+            color: #fff;
+}
+.right-instant{
+  width: 20vh;
+}
+.instant-icon{
+  width: 23vw;
+            display: flex;
+            place-items: center;
+            position: absolute;
+            bottom: 0;
+            right: 33%;
+        }
+
+.instant-icon1{
+  width: 20vw;
+  display: flex;
+  place-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+
+}
+.instant-icon2{
+  width: 25vw;
+  display: flex;
+  place-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+
+}
+@media screen and (max-width: 768px) {
+  .right-instant {
+    width: 100vw; /* Full width */
+    height: 40vh; /* Fixed height */
+    overflow: hidden; /* Prevent overflow */
+    margin-bottom: 20px; /* Add space below the container to prevent overlap with text */
+    position: relative; /* Ensure it doesn't overlap other content */
+  }
+
+  .instant-icon, .instant-icon1, .instant-icon2 {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .instant-icon {
+    animation-name: showFirst;
+  }
+
+  .instant-icon1 {
+    animation-name: showSecond;
+  }
+
+  .instant-icon2 {
+    animation-name: showThird;
+    width:75vw;
+    right:-8%;
+  }
+
+  @keyframes showFirst {
+    0% { opacity: 1; }
+    33% { opacity: 1; }
+    34% { opacity: 0; }
+  }
+
+  @keyframes showSecond {
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    67% { opacity: 0; }
+  }
+
+  @keyframes showThird {
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+}
+.blurred {
+  filter: blur(10px);
+  transition: filter 0.5s ease; /* Smooth transition effect */
 }
