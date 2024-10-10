@@ -37,7 +37,35 @@
   right: -35%;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .ai-container {
+    flex-direction: column; /* Stack the elements vertically */
+  }
 
+  .left-container {
+    order: 1; /* Ensure left container comes first */
+  }
+
+  .ai-text-right {
+    order: 2; /* Ensure right container comes second */
+    margin-top: 20px;
+    margin-left: 80px; /* Add some space between containers if necessary */
+  }
+  
+  /* Adjust widths to fit mobile screen */
+  .left-container, .ai-text-right {
+    width: 100%; /* Make them take up full width */
+  }
+
+  .ai-image img {
+    width: 80%; /* Make images responsive on smaller screens */
+    height: auto;
+  }
+  
+  .try-now-btn {
+    width: 100%; /* Full-width button for mobile view */
+  }
+}
 .line-background {
   position: absolute;
                 width: 150%;
@@ -239,6 +267,9 @@ width: 35%;
     overflow: hidden; /* Prevent overflow */
     margin-bottom: 20px; /* Add space below the container to prevent overlap with text */
     position: relative; /* Ensure it doesn't overlap other content */
+  }
+  .text-instant{
+    margin-left: 20px;
   }
 
   .instant-icon, .instant-icon1, .instant-icon2 {
